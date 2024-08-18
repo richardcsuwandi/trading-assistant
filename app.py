@@ -66,17 +66,17 @@ def main():
 
             # Custom summary statistics
             summary_stats = {
-                "AAPL": {
-                    "Mean": df["AAPL"].mean(),
-                    "Standard Deviation": df["AAPL"].std(),
-                    "Minimum": df["AAPL"].min(),
-                    "Maximum": df["AAPL"].max()
+                stock1.split()[-1]: {
+                    "Mean": df[stock1.split()[-1]].mean(),
+                    "Standard Deviation": df[stock1.split()[-1]].std(),
+                    "Minimum": df[stock1.split()[-1]].min(),
+                    "Maximum": df[stock1.split()[-1]].max()
                 },
-                "MSFT": {
-                    "Mean": df["MSFT"].mean(),
-                    "Standard Deviation": df["MSFT"].std(),
-                    "Minimum": df["MSFT"].min(),
-                    "Maximum": df["MSFT"].max()
+                stock2.split()[-1]: {
+                    "Mean": df[stock2.split()[-1]].mean(),
+                    "Standard Deviation": df[stock2.split()[-1]].std(),
+                    "Minimum": df[stock2.split()[-1]].min(),
+                    "Maximum": df[stock2.split()[-1]].max()
                 }
             }
 
@@ -84,12 +84,12 @@ def main():
             st.header("📊 Summary Statistics")
             col1, col2 = st.columns(2)
             with col1:
-                st.subheader("🍎 AAPL")
-                st.write(pd.DataFrame(summary_stats["AAPL"], index=["Values"]))
+                st.subheader(stock1)
+                st.write(pd.DataFrame(summary_stats[stock1.split()[-1]], index=["Values"]))
 
             with col2:
-                st.subheader("🪟 MSFT")
-                st.write(pd.DataFrame(summary_stats["MSFT"], index=["Values"]))
+                st.subheader(stock2)
+                st.write(pd.DataFrame(summary_stats[stock2.split()[-1]], index=["Values"]))
 
 if __name__ == "__main__":
     main()
