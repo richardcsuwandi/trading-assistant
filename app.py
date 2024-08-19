@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 # Set page config at the very beginning
-st.set_page_config(layout="wide", page_title="Cute Stock Pair Trading Analysis")
+st.set_page_config(layout="wide", page_title="🎀 Il's Trading Assistant")
 
 # List of popular stocks with cute emojis
 popular_stocks = [
