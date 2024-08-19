@@ -21,7 +21,7 @@ def main():
     st.title("🎀 Il's Trading Assistant")
 
     # add a welcome message
-    st.info("Hello there! I am your trading assistant. What stocks would you like to compare today?")
+    st.info("Hello there! It's kkobear 🤍, your trading assistant. What stocks would you like to compare today?")
     st.markdown("---")
 
     # Sidebar for user inputs
