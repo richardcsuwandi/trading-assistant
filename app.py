@@ -23,8 +23,16 @@ def main():
 
     # Sidebar for user inputs
     st.sidebar.header("📈 Pick your stocks")
+
     stock1 = st.sidebar.selectbox("First stock:", popular_stocks, index=0)
     stock2 = st.sidebar.selectbox("Second stock:", popular_stocks, index=1)
+
+    # allow user to enter stocks manually
+    if st.sidebar.checkbox("🔍 Search for your own stocks"):
+        stock1 = st.sidebar.text_input("First stock:")
+        stock2 = st.sidebar.text_input("Second stock:")
+        stock1 = stock1.upper()
+        stock2 = stock2.upper()
 
     st.sidebar.header("📅 When shall we look?")
     col1, col2 = st.sidebar.columns(2)
